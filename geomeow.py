@@ -131,3 +131,13 @@ def atriangle_area(a,b,sudut_apit):
         return Luas_Segitiga
     else:
         raise ValueError("The sides and the angle should be positive.")
+    
+def triangle_area(b, h):
+    """
+    This function takes the base and height of a right-angled triangle and returns the area of the right-angled triangle.
+    """
+    if b < 0 or h < 0:
+        raise ValueError("Base and height must be positive")
+    else:
+        print(f"The area of the triangle with base = {b} and height = {h} is {0.5 * b * h} square units")
+        return 0.5 * b * h
