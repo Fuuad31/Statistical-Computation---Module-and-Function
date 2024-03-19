@@ -103,3 +103,31 @@ def trapezoid_area(a,b,t):
         raise ValueError("Sides must be positive")
     else:
         return print("Trapezoid area =", [0.5*(a+b)*t])
+    
+def striangle_area(a,b,c):
+    """
+    a = panjang sisi 1
+    b = panjang sisi 2
+    c = panjang sisi 3
+    """
+    if (a + b > c) and (a + c > b) and (b + c > a) and a > 0 and b > 0 and c > 0:
+        s = (a+b+c) / 2
+        Luas_Segitiga = np.sqrt(s*(s-a)*(s-b)*(s-c))
+        print(f"The area of triangle given sides {a}, {b}, {c} is {Luas_Segitiga}.")
+        return Luas_Segitiga
+    else:
+        raise ValueError("The sides do not form a triangle.")
+
+def atriangle_area(a,b,sudut_apit):
+    """
+    a = panjang sisi 1
+    b = panjang sisi 2
+    sudut_apit = sudut apit antara a dan b
+    """
+    if a > 0 and b > 0 and sudut_apit > 0 and sudut_apit < 180:
+        sudut_apit_radian = math.radians(sudut_apit)
+        Luas_Segitiga = 0.5 * a * b * math.sin(sudut_apit_radian)
+        print(f"The area of triangle given sides {a}, {b}, and the angle between them {sudut_apit} is {Luas_Segitiga}.")
+        return Luas_Segitiga
+    else:
+        raise ValueError("The sides and the angle should be positive.")
