@@ -72,6 +72,7 @@ def circle_area(r):
         raise ValueError("Radius must be positive")
     else:
         area = math.pi*r
+        print(f"The area of the circle with radius = {r} is {area} square units")
         return area
 
 def circle_perimeter(r):
@@ -82,6 +83,7 @@ def circle_perimeter(r):
         raise ValueError("Radius must be positive")
     else:
         perim=2*math.pi*r
+        print(f"The perimeter of the circle with radius = {r} is {perim} units")
         return perim
 
 def squares_area(a,b = 0):
